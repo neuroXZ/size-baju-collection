@@ -19,6 +19,18 @@ function doGet() {
     .addMetaTag('viewport', 'width=device-width, initial-scale=1');
 }
 
+// Untuk landing page luar (contoh Vercel): terima POST JSON
+function doPost(e) {
+  let hasil;
+  try {
+    const senarai = JSON.parse(e.postData.contents);
+    hasil = { ok: true, jumlah: hantarBorang(senarai) };
+  } catch (err) {
+    hasil = { ok: false, ralat: err.message };
+  }
+  return ContentService.createTextOutput(JSON.stringify(hasil)).setMimeType(ContentService.MimeType.JSON);
+}
+
 // Dipanggil dari form -> simpan semua nama ke Google Sheet sekali gus
 function hantarBorang(senarai) {
   if (!Array.isArray(senarai) || senarai.length === 0) throw new Error('Sila isi sekurang-kurangnya satu nama.');
