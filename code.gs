@@ -1,6 +1,6 @@
 // ====== TETAPAN ======
 const SHEET_ID = '1VCAeK3wfVn0-fEH68y7EtYSxVw4Tu0ZxcaJ7244tzrQ'; // Google Sheet "Data Size Baju Family Day 2026"
-const IMAGE_ID = '1mPE4y_MtlVQ5YhW185gbP8CoDy2ru3W1';            // "gambar baju.png" dalam Drive (mesti share: Anyone with the link)
+const IMAGE_ID = '1-4I2rFrMesA1FhWNhjrPvIyvBk5JkHfl';            // "gambar baju.jpeg" dalam Drive (mesti share: Anyone with the link)
 
 const SIZE_IKUT_JENIS = {
   'Lengan Pendek - Lelaki': ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL'],
